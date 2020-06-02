@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import SearchBar from "../SearchBar/SearchBar.js";
+import BookList from "../BookList/BookList.js"
+import request from "superagent";
 
 class BookSearch extends Component {
     constructor(props){
@@ -9,6 +11,17 @@ class BookSearch extends Component {
             books: [],
             searchField: ""
         }
+    }
+
+    searchBook = (event) => {
+        event.preventDefault();
+        request
+            .get("https://www.googleapis.com/books/v1/volumes")
+            .query({ q: this.state.searchField })
+            .then((data) => {
+                console.log(data);
+                this.setState({ books: [...data.body.items] })
+        })
     }
 
     handleSearch = (event) => {
@@ -21,10 +34,11 @@ class BookSearch extends Component {
     render() {
       return (
         <div>
-          <SearchBar handleSearch={this.handleSearch}/>
+          <SearchBar searchBook={this.searchBook} handleSearch={this.handleSearch}/>
+          <BookList books={this.state.books} />
         </div>
       );
     }
-  }
+  } 
   
   export default BookSearch;

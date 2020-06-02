@@ -4,7 +4,7 @@ import "./style.css";
 const SearchBar = (props) => {
     return(
         <div className="search-bar">
-            <form action="">
+            <form onSubmit={props.searchBook} action="">
                 <input onChange={props.handleSearch} type="text" />
                 <button type="submit">Search</button>
             </form>
