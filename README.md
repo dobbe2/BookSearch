@@ -10,12 +10,12 @@ Although it does not have the required functionality for the assingnment, I enjo
 Start by installing front and backend dependencies. While in this directory, run the following command:
 
 
-# technologies used 
+## technologies used 
 
 -superagent
 -google books API
 -react
 
-# deployed
+## deployed
 
 You can check this app out at https://salty-refuge-00824.herokuapp.com/
