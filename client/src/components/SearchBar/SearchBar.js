@@ -5,7 +5,7 @@ const SearchBar = (props) => {
     return(
         <div className="search-bar">
             <form onSubmit={props.searchBook} action="">
-                <input onChange={props.handleSearch} type="text" />
+                <input id="searchBar" onChange={props.handleSearch} type="text" />
                 <button type="submit">Search</button>
             </form>
         </div>

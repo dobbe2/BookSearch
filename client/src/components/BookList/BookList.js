@@ -4,10 +4,12 @@ import BookCard from "../BookCard/BookCard.js"
 
 const BookList = (props) => {
     return(
-        <div className="list">
+        <div className="container mt-4">
+            <div className="row justify-content-center">
             {
                 props.books.map((book, i) => {
                     return <BookCard 
+                                key={i}
                                 image={book.volumeInfo.imageLinks.thumbnail}
                                 title={book.volumeInfo.title}
                                 author={book.volumeInfo.authors}
@@ -17,7 +19,7 @@ const BookList = (props) => {
                                 />
                 })
             }
-        </div>
+        </div></div>
     )
 }
 
