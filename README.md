@@ -9,12 +9,16 @@ Although it does not have the required functionality for the assingnment, I enjo
 
 Start by installing front and backend dependencies. While in this directory, run the following command:
 
+<img src="./client/src/assets/bookSearchScreenShot.jpg" ></img>
+
 
 ## technologies used 
 
--superagent
--google books API
--react
+* Superagent
+* Google Books API
+* React
+* Express
+* Bootstrap
 
 ## deployed
 
